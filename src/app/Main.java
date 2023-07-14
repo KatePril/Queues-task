@@ -3,6 +3,7 @@ package app;
 import app.dataDisplay.OutputGetter;
 import app.dataProviders.DataProvider;
 import app.operators.ElementAdder;
+import app.operators.ElementRemover;
 
 import java.util.LinkedList;
 import java.util.Queue;
@@ -10,6 +11,7 @@ import java.util.Queue;
 public class Main {
     public static void main(String[] args) {
         executeTaskOne();
+        executeTaskTwo();
     }
 
     private static void executeTaskOne() {
@@ -26,6 +28,15 @@ public class Main {
     }
 
     private static void executeTaskTwo() {
-        Queue<String> fruits = DataProvider.getFruits();
+        LinkedList<String> fruits = DataProvider.getFruits();
+        OutputGetter<String> outputGetter = new OutputGetter<>();
+        ElementRemover<String> elementRemover = new ElementRemover<>();
+
+        outputGetter.getIntDataMsg();
+        outputGetter.getOutput(fruits);
+
+        elementRemover.removeFirstElement(fruits);
+        outputGetter.getUpdatedDataMsg();
+        outputGetter.getOutput(fruits);
     }
 }
