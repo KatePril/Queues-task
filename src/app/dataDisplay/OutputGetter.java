@@ -13,8 +13,17 @@ public class OutputGetter<E> {
         StringBuilder output = new StringBuilder();
         for (E el : queue) {
             output.append(count).append(") ");
-            output.append(el);
+            output.append(el).append("\n");
+            count++;
         }
         return output.toString();
+    }
+
+    public void getIntDataMsg() {
+        System.out.println("Initial data:");
+    }
+
+    public void getUpdatedDataMsg() {
+        System.out.println("Updated data:");
     }
 }
