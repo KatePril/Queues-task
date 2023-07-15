@@ -7,6 +7,8 @@ import app.operators.ElementRemover;
 
 import java.util.LinkedList;
 
+import static java.lang.String.format;
+
 public class Main {
     public static void main(String[] args) {
         executeTaskOne();
@@ -34,7 +36,7 @@ public class Main {
         outputGetter.getIntDataMsg();
         outputGetter.getOutput(fruits);
 
-        elementRemover.removeFirstElement(fruits);
+        System.out.printf("%s was removed%n", elementRemover.removeFirstElement(fruits));
         outputGetter.getUpdatedDataMsg();
         outputGetter.getOutput(fruits);
     }
