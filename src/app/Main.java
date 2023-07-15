@@ -6,6 +6,7 @@ import app.operators.ElementAdder;
 import app.operators.ElementRemover;
 
 import java.util.LinkedList;
+import java.util.Queue;
 
 import static java.lang.String.format;
 
@@ -16,7 +17,7 @@ public class Main {
     }
 
     private static void executeTaskOne() {
-        LinkedList<String> fruits = DataProvider.getFruits();
+        Queue<String> fruits = DataProvider.getFruits();
         OutputGetter<String> outputGetter = new OutputGetter<>();
         ElementAdder<String> elementAdder = new ElementAdder<>();
 
@@ -29,7 +30,7 @@ public class Main {
     }
 
     private static void executeTaskTwo() {
-        LinkedList<String> fruits = DataProvider.getFruits();
+        Queue<String> fruits = DataProvider.getFruits();
         OutputGetter<String> outputGetter = new OutputGetter<>();
         ElementRemover<String> elementRemover = new ElementRemover<>();
 
